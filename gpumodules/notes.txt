@@ -1,0 +1,42 @@
+Plan for how this will work:
+
+For a game:
+
+	parameters: 4 players and a board.
+
+	Cards:
+		Assign each player their seat and cards.
+
+	Bidding:
+		In turns,
+			Tell each player what has been bid so far.
+			Ask the player what they would like to bid.
+			Check validity of bid, if invalid give a penalty of one trick for that round per invalid bid.
+		End after 3 consecutive passes. Contract will be the highest valid bid.
+
+	Play:
+		13 times,
+			4 times, starting with the declerer or whoever won the last round.
+				Tell each player what cards have been played previously and what cards have been played this round,
+				Ask each player what to play.
+				Check validity of card, if invalid give a penalty of one trick for that round per invalid card.
+					invalid cards:
+						not in hand, already played, not following suit.
+
+-------------------------------------------------------------------------------
+
+
+To Do:
+-------
+
+Overall
+	* Vectorise all the functions for smooth numpy opperations.
+
+Game.py
+	* sort out doubling
+
+
+Player.py
+	* decide_bid()
+	* decide_card()
+
